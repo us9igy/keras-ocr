@@ -438,7 +438,7 @@ def draw_text_image(
         while not all(
             cv2.pointPolygonTest(contour=transformed_contour, pt=pt, measureDist=False)
             >= 0
-            for pt in [(x, y), (x2, y), (x2, y2), (x, y2)]
+            for pt in [int((x, y)), int((x2, y)), int((x2, y2)), int((x, y2))]
         ):
             if x2 > end_x:
                 dy = max(1, max_y - y)
