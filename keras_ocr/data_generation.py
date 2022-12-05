@@ -568,7 +568,7 @@ def compute_transformed_contour(width, height, fontsize, M, contour, minarea=0.5
         next(
             index
             for index, contour in enumerate(newContours)
-            if cv2.pointPolygonTest(contour=contour, pt=int(x, y), measureDist=False) >= 0
+            if cv2.pointPolygonTest(contour=contour, pt=(int()x, int(y)), measureDist=False) >= 0
         )
     ][:, 0, :]
     return contour
